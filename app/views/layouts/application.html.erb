@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <title>Botanik</title>
+    <%= favicon_link_tag 'favicon.png' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Leu1dkqAAAAAIEIIK_jLF__r2NyG8y0a7-jHMVI"></script>
+    <%# Prélade chaque image listée dans vos carousels %>
+    <% carousel_images = [
+        "M-1.png","M-2.png","M-3.png",
+        "P-1.jpeg","P-2.jpeg","P-3.jpeg","P-4.jpeg",
+        "G-1.jpeg","G-2.jpeg","G-3.jpeg","G-4.jpeg",
+        "L-1.jpeg","L-2.jpeg","L-3.jpeg","L-4.jpeg",
+        "Chambre-01_1.png","Chambre-01_2.png","Chambre-01.png",
+        "Suite-01_1.png","Suite-01_2.png","Suite-01.png",
+        "Suite-02_1.png","Suite-02_2.png","Suite-03_1.png","Suite-03_2.png",
+        "Suite-04.png","Salon-01.png","Salon-01_1.png","Salon-01_2.png",
+        "Salon-02_3.png","Salon-03_3.png","Salon-03.png",
+        "Sam-01_1.png","Sam-01.png","Sam-02_1.png","Sam-02.png"
+      ] %>
+    <% carousel_images.each do |img| %>
+      <%= preload_link_tag asset_path(img), as: "image" %>
+    <% end %>
+  </head>
+
+  <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6Leu1dkqAAAAAIEIIK_jLF__r2NyG8y0a7-jHMVI', {action: 'LOGIN'});
+      });
+    }
+  </script>
+
+  <body class="<%= 'overflow-y-hidden' if current_page?(root_path) %>">
+
+    <%= render "layouts/header" %>
+    <main>
+      <%= yield %>
+    </main>
+    <% unless controller_name == "pages" && action_name == "index" %>
+      <%= render "layouts/footer" %>
+    <% end %>
+    <% if params[:download] %>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          window.open("/brochures/brochure.pdf", "_blank");
+        });
+      </script>
+    <% end %>
+
+  <style>
+    .grecaptcha-badge {
+      visibility: hidden;
+    }
+  </style>
+  </body>
+</html>

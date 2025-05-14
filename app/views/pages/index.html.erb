@@ -1,0 +1,72 @@
+<div data-controller="horizontal-scroll" data-action="wheel@window->horizontal-scroll#wheel" class="relative inset-0 overflow-hidden mt-[80px]">
+  <div class="relative h-[80vh] md:mx-10">
+    <% @slides.each_with_index do |slide, index| %>
+      <div data-horizontal-scroll-target="slide"
+           class="absolute inset-0 transition-transform duration-[1500ms] ease-in-out"
+           style="z-index: <%= @slides.size - index %>; transform: translateX(0);">
+        <div class="w-full h-full relative">
+          <!-- Conteneur du background avec effet zoom en hover et animation fade in -->
+          <div data-controller="parallax-hover fade-in" class="w-full h-full relative shadow-lg overflow-hidden">
+            <div data-parallax-hover-target="image" class="absolute inset-0 bg-cover bg-center will-change-transform"
+                 style="background-image: url('<%= asset_path(slide[:image_url]) %>');">
+            </div>
+          </div>
+          <!-- Overlay du texte avec animation fade up -->
+          <div class="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-center px-4 pointer-events-none">
+            <div data-controller="fade-up">
+              <h1 class="text-white text-4xl md:text-6xl font-nimbus mb-4"><%= slide[:title] %></h1>
+              <p class="text-white text-lg md:text-2xl font-chaparral mb-4 italic"><%= slide[:description] %></p>
+              <a href="<%= slide[:link] %>"
+                class="link-border-anim text-white inline-block pointer-events-auto font-chaparral">
+                <%= slide[:cta] %>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Boutons de navigation pour mobile -->
+  <button data-action="click->horizontal-scroll#previous" class="md:hidden absolute bottom-[20px] left-[20px] bg-white text-2xl text-ocre z-30 py-4 leading-none px-1">
+    &#8592;
+  </button>
+  <button data-action="click->horizontal-scroll#next" class="md:hidden absolute bottom-[20px] right-[20px] bg-white text-2xl text-ocre z-30 py-4 leading-none px-1">
+    &#8594;
+  </button>
+</div>
+
+<!-- Bouton & Modal (inchangés) -->
+<div data-controller="modal" class="absolute bottom-[20px] md:bottom-[20px] inset-x-0 flex justify-center items-center z-30">
+  <button data-action="click->modal#open"
+          class="pointer-events-auto text-main px-6 py-4 text-2xl bg-white font-chaparral italic tracking-[0.02rem] leading-none
+                btn-border-b-anim">
+    Télécharger notre brochure
+  </button>
+
+  <div data-modal-target="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">
+    <div class="bg-white py-12 px-12 md:px-24 relative w-[900px] max-w-[1200px] drop-shadow-xl">
+      <button data-action="click->modal#close" class="absolute top-2 right-2 text-main text-2xl z-50">&times;</button>
+      <h2 class="text-2xl mb-4 text-center font-chaparral text-main tracking-[0.02rem]">Télécharger la brochure</h2>
+      <%= form_with url: brochure_path, method: :post, local: true, html: { target: "download_iframe" } do |form| %>
+        <div class="mb-4">
+          <%= form.text_field :name, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Nom" %>
+        </div>
+        <div class="mb-4">
+          <%= form.email_field :email, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Email" %>
+        </div>
+        <div class="mb-4">
+          <%= form.telephone_field :phone, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Téléphone" %>
+        </div>
+        <div class="mb-4">
+          <%= recaptcha_tags %>
+        </div>
+        <div class="flex justify-center">
+          <%= form.submit "Télécharger la brochure", class: "bg-main text-white px-4 py-2 rounded-full font-montserrat tracking-[0.02rem]" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<iframe name="download_iframe" style="display: none;"></iframe>

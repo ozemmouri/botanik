@@ -1,0 +1,28 @@
+<turbo-frame id="villa_carousel">
+  <div data-controller="carousel" class="relative w-full mx-auto my-2">
+    <!-- Arrière-plan (positionné en absolu) -->
+    
+    <!-- Contenu du carousel -->
+    <div class="flex items-center justify-center relative z-10">
+      <!-- Bouton Précédent -->
+      <button data-action="click->carousel#prev" class="flex-shrink-0 p-2 hover:opacity-80 transition">
+        <%= image_tag "arrow-left-ocre.svg", alt: "Précédent", class: "h-[75px] md:h-[200px]" %>
+      </button>
+  
+      <!-- Conteneur de l'image centrale avec un padding vertical -->
+      <div class="flex-shrink-0 relative w-[350px] md:w-[1170px] py-4">
+        <% images = ["TYPE G RDC.png", "TYPE G ETG.png", "TYPE G TERRASSE.png"] %>
+        <% images.each_with_index do |image, index| %>
+          <div data-carousel-target="slide" class="<%= index.zero? ? '' : 'hidden' %>">
+            <%= image_tag image, class: "w-full drop-shadow", alt: "Image de Villa G" %>
+          </div>
+        <% end %>
+      </div>
+  
+      <!-- Bouton Suivant -->
+      <button data-action="click->carousel#next" class="flex-shrink-0 p-2 hover:opacity-80 transition">
+        <%= image_tag "arrow-right-ocre.svg", alt: "Suivant", class: "h-[75px] md:h-[200px]" %>
+      </button>
+    </div>
+  </div>
+</turbo-frame>

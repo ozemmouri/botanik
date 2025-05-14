@@ -1,0 +1,78 @@
+<header class="fixed top-0 left-0 w-full h-[80px] px-2 md:px-10 flex justify-center md:justify-between items-center md:items-end mb-4 font-montserrat z-50 bg-white md:pb-4">
+  <div>
+    <%= link_to root_path do %>
+      <%= image_tag "logo-main.svg", alt: "Logo Botanik Garden", class: "h-[25px] md:h-auto md:w-[250px]" %>
+    <% end %>
+  </div>
+  <div data-controller="navbar" class="absolute right-2 md:static">
+    <button id="toggle-menu-button" data-action="click->navbar#toggleMenu" class="md:hidden z-50 relative flex items-center">
+      <span class="sr-only">Toggle Menu</span>
+      <div id="open" data-navbar-target="open" class="h-5 flex flex-col items-end justify-between">
+        <span class="block h-0.5 w-6 bg-ocre rounded-full"></span>
+        <span class="block h-0.5 w-6 bg-ocre rounded-full"></span>
+        <span class="block h-0.5 w-6 bg-ocre rounded-full"></span>
+      </div>
+      <div id="close" data-navbar-target="close" class="z-20 hidden h-7 flex flex-col items-end justify-between">
+        <span class="block h-0.5 w-8 bg-main rounded-full origin-left transform rotate-45 translate-y-0.5"></span>
+        <span class="block h-0.5 w-8 bg-main rounded-full origin-left transform -rotate-45 -translate-y-0.5"></span>
+      </div>
+    </button>
+
+    <div id="toggle-menu" data-navbar-target="menu" 
+      class="hidden md:block text-right text-3xl fixed top-0 left-0 h-full w-screen flex flex-col items-center justify-evenly 
+             md:text-lg md:relative md:top-0 md:left-0 md:bg-transparent md:w-auto md:h-auto md:text-left bg-nude z-40">
+      <%= link_to (image_tag "logo-main.svg", class:"md:hidden w-[250px]"), root_path %>
+      <ul class="flex flex-col gap-y-7 md:flex-row md:gap-2 items-center">
+        <li class="<%= current_page?(presentation_path) ? 'font-semibold' : 'text-main md:text-main' %> md:px-4 transition-all hover:text-black">
+          <%= link_to "Le Projet", presentation_path %>
+        </li>
+        <%# 
+        <li class="<%= current_page?(mot_architecte_path) ? 'text-gray-700 font-semibold' : 'text-white md:text-main'  md:px-4 transition-all hover:underline hover:underline-offset-4">
+          <%= link_to "Mot de l'architecte", mot_architecte_path %>
+        </li>
+        <li class="<%= current_page?(typologies_path) ? 'font-semibold' : 'text-main md:text-main' %> md:px-4 transition-all hover:text-black">
+          <%= link_to "Nos villas", typologies_path %>
+        </li>
+        <li class="<%= current_page?(aedge_path) ? 'font-semibold' : 'text-main md:text-main' %> md:px-4 transition-all hover:text-black">
+          <%= link_to "AEdge Partners", aedge_path %>
+        </li>
+        <div data-controller="modal" class="flex justify-center items-center z-50">
+          <button data-action="click->modal#open"
+                  class="pointer-events-auto text-white px-4 py-2 text-xl md:text-sm bg-main font-montserrat tracking-[0.02rem] rounded-full">
+            Contactez-nous
+          </button>
+
+          <div data-modal-target="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">
+            <div class="bg-white py-12 px-24 relative w-[900px] max-w-[1200px] drop-shadow-xl">
+              <button data-action="click->modal#close" class="absolute top-2 right-2 text-main text-2xl z-50">&times;</button>
+              <h2 class="text-2xl mb-4 text-center font-chaparral text-main tracking-[0.02rem]">Télécharger la brochure</h2>
+              <%= form_with url: brochure_path, method: :post, local: true, html: { target: "download_iframe" } do |form| %>
+                <div class="mb-4">
+                  <%= form.text_field :name, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Nom" %>
+                </div>
+                <div class="mb-4">
+                  <%= form.email_field :email, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Email" %>
+                </div>
+                <div class="mb-4">
+                  <%= form.telephone_field :phone, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Téléphone" %>
+                </div>
+                <div class="mb-4">
+                  <%= recaptcha_tags %>
+                </div>
+                <div class="flex justify-center">
+                  <%= form.submit "Télécharger la brochure", class: "bg-main text-white px-4 py-2 rounded-full font-montserrat tracking-[0.02rem]" %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+<iframe name="download_iframe" style="display: none;"></iframe>
+        
+        <%# <li>
+          <%= link_to "Contact", "#", class:"border-[1px] border-black rounded-3xl py-2 px-4 transition-all hover:opacity-50"
+        </li> %>
+      </ul>
+    </div>
+  </div>
+</header>

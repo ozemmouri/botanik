@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ html {
+  scroll-behavior: smooth;
+}
+
+ @font-face {
+  font-family: 'Asap';
+  src: asset-url('Asap-VariableFont_wdth,wght.ttf') format('truetype');
+  /* Pour une police variable, vous pouvez indiquer une plage de font-weight si besoin :
+     font-weight: 100 900; */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NimbusRomNo9';
+  src: asset-url('NimbusRomNo9L-Reg.otf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: asset-url('Montserrat-VariableFont_wght.ttf') format('truetype');
+  /* Pour une police variable, vous pouvez indiquer une plage de font-weight si besoin :
+     font-weight: 100 900; */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Chaparral';
+  src: asset-url('ChaparralPro-Regular.otf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Carattere';
+  src: asset-path('Carattere-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+
+@keyframes flip {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.animate-flip {
+  animation: flip 1s forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}

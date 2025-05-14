@@ -1,0 +1,203 @@
+<div class="bg-cover bg-center md:bg-fixed mt-[80px] md:mx-10 h-[82vh]" style="background-image: url('<%= asset_path("villa_type_D_1.jpeg") %>');">
+
+</div>
+<div data-controller="fade-scroll" class="flex flex-col justify-center items-center py-4 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+  <h2 class="italic text-center text-main">
+    LE DOMAINE OU LE LUXE SE FAIT SILENCE
+  </h2>
+</div>
+<div class="flex justify-center items-center md:mx-10 border-y-[0.5px] border-y-perse">
+  <ul class="flex justify-evenly items-center py-2">
+    <li class="font-chaparral text-lg text-perse hover:text-main">
+      <%= link_to "Emplacement", "#localisation" %>
+    </li>
+    <li class=" text-perse font-chaparral text-lg hover:text-main mx-10">
+      <%= link_to "Concept", "#concept" %>
+    </li>
+    <li class="text-perse font-chaparral text-lg hover:text-main">
+      <%= link_to "Equipements", "#equipements" %>
+    </li>
+  </ul>
+</div>
+<div id="localisation" data-controller="fade-scroll" class="flex flex-col justify-center py-8 items-center text-center mx-4 md:mx-48 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+  <h2 class="italic">
+    Idéalement implanté aux abords de la célèbre route d'Amezmiz, à proximité immédiate des prestigieux établissements hôteliers et parcours golfiques de renommée internationale. 
+  </h2>
+</div>
+
+<div class="flex flex-col md:flex-row justify-evenly items-center my-8 md:mx-20 overflow-hidden">
+  <!-- Élément 1 – Aéroport -->
+  <div class="flex flex-col">
+    <div 
+      data-controller="parallax-scroll" 
+      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
+    >
+      <%= image_tag "aeroport.png", 
+            class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
+            data: { "parallax-scroll-target" => "image" } %>
+    </div>
+    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+      <p class="text-ocre font-montserrat text-lg text-center">
+        <span class="italic text-2xl">10 minutes</span><br> 
+        Aéroport Menara Marrakech
+      </p>
+    </div>
+  </div>
+  
+  <!-- Élément 2 – Golf -->
+  <div class="flex flex-col">
+    <div 
+      data-controller="parallax-scroll" 
+      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
+    >
+      <%= image_tag "golf.png", 
+              class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
+              data: { "parallax-scroll-target" => "image" } %>
+    </div>
+    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+      <p class="text-ocre font-montserrat text-lg text-center">
+        <span class="italic text-2xl">5 minutes</span> <br>
+        Parcours golfiques
+      </p>
+    </div>
+  </div>
+  
+  <!-- Élément 3 – Avenue -->
+  <div class="flex flex-col">
+    <div 
+      data-controller="parallax-scroll" 
+      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
+    >
+      <%= image_tag "avenue.png", 
+              class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
+              data: { "parallax-scroll-target" => "image" } %>
+    </div>
+    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+      <p class="text-ocre text-lg font-montserrat text-center">
+        <span class="italic text-2xl">5 minutes</span><br>
+        Avenue Mohammed V
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-nude my-8 md:mx-20 flex-col lg:flex-row flex justify-center items-center">
+  <div data-controller="fade-scroll" class="lg:w-[600px] mx-12 pt-4 lg:pt-0 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+    <h3 class="text-2xl font-chaparral">Un Emplacement d’Exception Entre Ville, Nature et Loisirs</h3>
+    <br><br>
+    <p class="text-justify text-base">
+    Situé sur la route d’Amezmiz vers l’Ourika, ce domaine de villas de prestige vous offre un cadre de vie unique où chaque instant se pare de beauté et d’authenticité. À seulement 15 minutes du cœur vibrant de la médina de Marrakech, laissez-vous séduire par l’effervescence des souks, des monuments historiques et des ruelles animées. En 20 minutes, gagnez l’aéroport Menara pour vos escapades à l’international, ou plongez dans l’univers coloré du Jardin Majorelle et du Musée Yves Saint Laurent, véritables joyaux culturels.
+    <br><br>
+    Pour les passionnés de golf et de détente, les parcours renommés de La Noria, du Royal Palm et d’Assoufid se trouvent à moins de 15 minutes en voiture. Et lorsque l’appel de la nature se fait sentir, partez à l’aventure dans les montagnes de l’Atlas, accessibles en seulement 30 minutes, pour des panoramas époustouflants et des activités en plein air inoubliables.
+    </p>
+  </div>
+  <%= image_tag "map botanic orange.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[400px] lg:w-[550px] py-8" %>
+</div>
+<div class="my-8 md:px-12  px-4 py-8 mx-4 md:mx-20 bg-archi text-white">
+  <div class="flex flex-col md:flex-row justify-between items-center">
+    <div data-controller="slide-in" data-slide-in-direction-value="left" class="flex flex-col items-center justify-between min-w-[300px]">
+      <%= image_tag "kacem-photo.jpg", class:"w-[350px]" %>
+      <h4 class="text-base text-white text-center">
+        Kacem Benhayoun<br>
+        Architecte
+      </h4>
+    </div>
+
+    <div>
+      <h2 class="text-white mx-2 md:mx-8 pt-4 md:pt-0 pb-8 font-chaparral">
+        Botanik Garden – L’architecture au service de la nature
+      </h2>
+      <div data-controller="fade-scroll" class="flex flex-col md:flex-row opacity-0 translate-y-4 transition-all duration-[1500ms]">
+        <p class="text-white text-justify mx-4 md:mx-8 text-base italic">
+          Implanté dans un cadre naturel exceptionnel à Marrakech, Botanik Garden puise son identité
+          dans la beauté unique de son environnement. Entouré de paysages luxuriants, avec une vue
+          imprenable sur les majestueuses montagnes de l’Atlas, le projet a été conçu comme une
+          véritable immersion dans la nature. Cette toile de fond spectaculaire a inspiré une architecture
+          qui s’efface pour mieux révéler le décor naturel. <br><br>
+          Le masterplan a été pensé comme un parcours paysager fluide, où chaque déplacement est
+          une expérience sensorielle. L’organisation des espaces, les percées visuelles et les circulations
+          douces créent un équilibre harmonieux entre le bâti et le végétal. Ici, l’architecture épouse le
+          terrain, respecte les vues, valorise la lumière et laisse la nature s’exprimer.
+        </p>
+        <p class="text-white text-justify mx-4 md:mx-0 my-2 md:my-0 text-base italic">
+          À l’échelle de chaque villa, nous avons imaginé une architecture fragmentée, faite de
+          volumes qui s’ouvrent, se décalent et laissent la végétation s’infiltrer au cœur de l’habitat.
+          Patios, jardins intérieurs, terrasses paysagées : chaque espace de vie devient un prolongement
+          du jardin. Les formes courbes et organiques des villas évoquent la douceur, la fluidité et le
+          calme — dans un esprit résolument botanique et contemporain. <br><br>
+          Botanik Garden, c’est une nouvelle façon d’habiter Marrakech : entre luxe discret, nature
+          omniprésente et architecture élégante, en parfaite harmonie avec son environnement.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex justify-center items-center ">
+  <div data-controller="fade-scroll" class="flex flex-col justify-center items-center bg-ocre py-4 px-4 md:px-48 opacity-0 translate-y-4 transition-all duration-[1500ms] mx-4 md:mx-20">
+    <h2 class="text-white py-4 font-montserrat text-center">Une composition harmonieuse, pensée pour offrir à chaque villa intimité, lumière et sérénité</h2>
+    <div>
+      <%= image_tag "plandemasse.png"%>
+    </div>
+  </div>
+</div>
+
+<div  id="concept" class="flex justify-center items-center md:mx-40 mt-8 mx-8 text-center">
+  <h3 data-controller="fade-scroll" class="opacity-0 translate-y-4 transition-all duration-[1500ms] font-chaparral">
+    Des villas d’exception, conçues pour une vie en harmonie avec la nature
+  </h3>
+</div>
+
+<!-- Conteneur de l'image -->
+<div class="relative h-[550px] overflow-hidden md:mx-10 my-12">
+  <!-- Background : l'image en fond -->
+  <div class="absolute inset-0 md:bg-fixed bg-center bg-cover" 
+       style="background-image: url('<%= asset_path("Diagonale-02_1.png") %>');">
+  </div>
+</div>
+
+<!-- Encart textuel placé à l'extérieur du conteneur de l'image -->
+<div class="md:mx-10 md:relative">
+  <!-- Utilisation d'une marge négative pour faire chevaucher l'encart sur l'image -->
+  <div data-controller="fade-scroll" class="bg-white md:w-[600px] py-8 px-12 flex justify-center items-center md:-mt-40 md:ml-20">
+    <h3 class="text-main text-center text-lg font-chaparral">
+      Pensé comme un havre de tranquillité aux portes de Marrakech, Botanik Garden
+      redéfinit l’habitat urbain en préservant l’intimité. Chaque villa, protégée par des
+      façades aveugles, s'ouvre sur des jardins intérieurs, patios végétalisés et terrasses,
+      offrant un cocon de sérénité. <br><br>
+      L’architecture organique s’intègre harmonieusement à la nature, avec des volumes
+      fragmentés et des lignes douces, créant un espace lumineux et verdoyant. Un projet
+      conçu pour ceux en quête d’une élégance discrète et d’une respiration au cœur de la
+      ville rouge.
+    </h3>
+  </div>
+</div>
+
+
+<div class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-2 md:mx-10 py-[50px]">
+  <%= image_tag "collage-1.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[354px] md:w-auto md:h-[516px] mb-[8px] md:mb-0 md:mr-[8px] drop-shadow-xl" %>
+  <div class="flex flex-col">
+    <div class="flex mb-[8px]">
+      <%= image_tag "collage-2.png", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] mr-[4px] md:mr-[8px] drop-shadow-xl" %>
+      <%= image_tag "collage-3.png", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] drop-shadow-xl" %>
+    </div>
+    <%= image_tag "collage-4.png", class:"w-[354px] md:w-auto md:h-[258px] drop-shadow-xl" %>
+  </div>
+</div>
+
+<div class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-2 md:mx-10 py-[50px]">
+  <%= image_tag "2-2.jpg", class:"w-[354px] md:w-auto md:h-[516px] mb-[8px] md:mb-0 md:mr-[8px] drop-shadow-xl" %>
+  <div class="flex flex-col">
+    <div class="flex mb-[8px]">
+      <%= image_tag "espaces-vert.jpg", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] mr-[4px] md:mr-[8px] drop-shadow-xl" %>
+      <%= image_tag "aire-jeux.jpg", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] drop-shadow-xl" %>
+    </div>
+    <%= image_tag "padel.avif", class:"w-[354px] md:w-auto md:h-[258px] drop-shadow-xl" %>
+  </div>
+</div>
+  
+  
+
+
+
+
+
+

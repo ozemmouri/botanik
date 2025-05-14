@@ -1,0 +1,522 @@
+<div data-controller="slider" class="overflow-hidden relative w-screen h-[550px]">
+  <!-- Container des images en flex, sur une seule ligne -->
+  <div data-slider-target="container" class="flex transition-transform duration-1000" style="transform: translateX(0);">
+    <%= image_tag "slider1.jpg", alt: "Image 1", class: "w-screen flex-shrink-0 object-bottom object-cover h-[550px]" %>
+    <%= image_tag "slider2.jpg", alt: "Image 2", class: "w-screen flex-shrink-0 object-bottom object-cover h-[550px]" %>
+    <%= image_tag "slider3.jpg", alt: "Image 3", class: "w-screen flex-shrink-0 object-bottom object-cover h-[550px]" %>
+  </div>
+</div>
+
+<div class="flex justify-center items-center text-ocre my-8 text-center">
+  <h1>Le domaine où le luxe se fait silence</h1>
+</div>
+
+<div class="relative h-[450px] overflow-hidden hidden md:flex">
+  <div class="absolute inset-0 bg-fixed bg-center bg-cover" style="background-image: url('<%= asset_path 'parallax.png' %>');">
+  </div>
+</div>
+<div class="flex justify-center items-center mx-4 my-4 md:mx-36 md:my-16">
+  <p class="text-center">
+    Idéalement implanté aux abords de la célèbre route d'Amezmiz, à proximité immédiate des prestigieux établissements hôteliers et parcours golfiques de renommée internationale, le projet Botanik Garden se positionne comme une référence incontournable de l'immobilier d'exception à Marrakech.
+  </p>
+</div>
+
+<div>
+  <%= image_tag "facade-img.png", alt: "Image façade" %>
+</div>
+
+<div class="mx-4 md:mx-20 my-8 md:my-16 flex flex-col md:flex-row justify-evenly items-center">
+  <div class="card" data-controller="flip">
+    <%= image_tag "icn-airport.png", alt: "icone Aeroport", class:"icn" %>
+    <p class="card-text">
+      10min <br>
+      Aéroport Menara
+    </p>
+  </div>
+  <div class="card" data-controller="flip">
+    <%= image_tag "icn-loca.png", alt: "icone Localisation", class:"icn" %>
+    <p class="card-text">
+      5min <br>
+      Boulevard Mohammed VI
+    </p>
+  </div>
+  <div class="card" data-controller="flip">
+    <%= image_tag "icn-golf.png", alt: "icone Golf", class:"icn" %>
+    <p class="card-text">
+      2min <br>
+      Parcours golfique
+    </p>
+  </div>
+</div>
+
+<div class="mx-8 md:mx-20 my-16 flex flex-col justify-evenly items-center">
+  <!-- Première rangée -->
+  <div class="flex flex-col md:flex-row justify-evenly items-center w-full">
+    <!-- Conteneur de la première image -->
+    <div class="relative group">
+      <%= image_tag "face-GA.jpg", alt: "façade villa G", class: "face-img" %>
+      <!-- Overlay agrandi qui s'affiche au hover -->
+      <div class="hidden group-hover:flex pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-50 justify-center items-center transition-opacity duration-300">
+        <%= image_tag "face-GA.jpg", alt: "façade villa G", class: "max-w-3xl max-h-[80vh]" %>
+      </div>
+    </div>
+
+    <!-- Conteneur de la deuxième image -->
+    <div class="relative group md:mx-4 my-2 md:my-0">
+      <%= image_tag "face-MA.jpg", alt: "façade villa M", class: "face-img" %>
+      <div class="hidden group-hover:flex pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-50 justify-center items-center transition-opacity duration-300">
+        <%= image_tag "face-MA.jpg", alt: "façade villa M", class: "max-w-3xl max-h-[80vh]" %>
+      </div>
+    </div>
+
+    <!-- Conteneur de la troisième image -->
+    <div class="relative group">
+      <%= image_tag "face-PA.jpg", alt: "façade villa P", class: "face-img" %>
+      <div class="hidden group-hover:flex pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-50 justify-center items-center transition-opacity duration-300">
+        <%= image_tag "face-PA.jpg", alt: "façade villa P", class: "max-w-3xl max-h-[80vh]" %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deuxième rangée -->
+  <div class="flex flex-col md:flex-row justify-evenly items-center mt-2 md:mt-4 w-full">
+    <div class="relative group">
+      <%= image_tag "face-GB.jpg", alt: "Vue arrière villa G", class: "face-img" %>
+      <div class="hidden group-hover:flex pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-50 justify-center items-center transition-opacity duration-300">
+        <%= image_tag "face-GB.jpg", alt: "Vue arrière villa G", class: "max-w-3xl max-h-[80vh]" %>
+      </div>
+    </div>
+
+    <div class="relative group md:mx-4 my-2 md:my-0">
+      <%= image_tag "face-MB.jpg", alt: "Vue arrière M", class: "face-img" %>
+      <div class="hidden group-hover:flex pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-50 justify-center items-center transition-opacity duration-300">
+        <%= image_tag "face-MB.jpg", alt: "Vue arrière M", class: "max-w-3xl max-h-[80vh]" %>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <%= image_tag "face-PB.jpg", alt: "Vue arrière P", class: "face-img" %>
+      <div class="hidden group-hover:flex pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-50 justify-center items-center transition-opacity duration-300">
+        <%= image_tag "face-PB.jpg", alt: "Vue arrière P", class: "max-w-3xl max-h-[80vh]" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mx-4 my-4 md:mx-36 md:my-16">
+  <p class="text-center">
+    Ce projet contemporain et élégant se distingue par son emplacement stratégique, offrant une vue panoramique sur les imposants sommets enneigés de l'Atlas.
+  </p>
+  <p class="text-center my-4">
+    Nous vous proposons des superficies diversifiées, parfaites pour répondre à toutes les ambitions d'investissement, qu'il s'agisse de résidences principales, de résidences secondaires ou d'opportunités locatives d'exception.
+  </p>
+</div>
+
+<div data-controller="carousel" class="relative w-full mx-auto pb-10">
+  <!-- Arrière-plan de la moitié inférieure -->
+  <div class="absolute bottom-0 left-0 w-full h-1/2 bg-ocre"></div>
+
+  <!-- Contenu du carousel, placé au-dessus de l'arrière-plan -->
+  <div class="flex items-center justify-center relative z-10">
+    <!-- Bouton Précédent (flèche gauche) -->
+    <button 
+      data-action="click->carousel#prev" 
+      class="flex-shrink-0 p-2 hover:opacity-80 transition"
+    >
+      <%= image_tag "arrow-left.svg", alt: "Précédent", class: "h-[75px] md:h-[200px]" %>
+    </button>
+
+    <!-- Conteneur de l'image centrale -->
+    <div class="flex-shrink-0 relative w-[350px] md:w-[1170px]">
+      <% images = ["Chambre-01_1.png", "Chambre-01_2.png", "Chambre-01.png", "Suite-01_1.png", "Suite-01_2.png", "Suite-01.png", "Suite-02_1.png", "Suite-02_2.png", "Suite-03_1.png", "Suite-03_2.png", "Suite-04.png"] %>
+      <% images.each_with_index do |image, index| %>
+        <!-- On affiche seulement la première image au départ -->
+        <div data-carousel-target="slide" class="<%= index == 0 ? '' : 'hidden' %>">
+          <img src="<%= asset_path(image) %>" class="w-full drop-shadow" alt="Image du projet">
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Bouton Suivant (flèche droite) -->
+    <button 
+      data-action="click->carousel#next" 
+      class="flex-shrink-0 p-2 hover:opacity-80 transition"
+    >
+      <%= image_tag "arrow-right.svg", alt: "Suivant", class: "h-[75px] md:h-[200px]" %>
+    </button>
+  </div>
+</div>
+
+<div class="relative my-8 md:my-16">
+  <%= image_tag "rooftop.png", alt: "Image RoofTop Villa Marrakech", class:"w-full md:w-[847px]" %>
+  <div class="p-8 bg-white bg-opacity-65 w-full md:w-[735px] md:absolute md:right-[48px] top-1/2 md:transform md:-translate-y-1/2">
+    <p class="text-justify">
+      Chaque villa a été conçue comme une œuvre architecturale d'exception, alliant avec élégance le minimalisme contemporain aux subtilités des influences traditionnelles marocaines.
+    </p>
+  </div>
+</div>
+
+<div data-controller="carousel" class="relative w-full mx-auto pb-10">
+  <!-- Arrière-plan de la moitié inférieure -->
+  <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-r from-[#C09C82] to-[#E9C0A2]"></div>
+
+  <!-- Contenu du carousel, placé au-dessus de l'arrière-plan -->
+  <div class="flex items-center justify-center relative z-10">
+    <!-- Bouton Précédent (flèche gauche) -->
+    <button 
+      data-action="click->carousel#prev" 
+      class="flex-shrink-0 p-2 hover:opacity-80 transition"
+    >
+      <%= image_tag "arrow-left.svg", alt: "Précédent", class: "h-[75px] md:h-[200px]" %>
+    </button>
+
+    <!-- Conteneur de l'image centrale -->
+    <div class="flex-shrink-0 relative w-[350px] md:w-[1170px]">
+      <% images = ["Salon-01.png", "Salon-01_1.png", "Salon-01_2.png", "Salon-02_3.png", "Salon-03_3.png", "Salon-03.png", "Sam-01_1.png", "Sam-01.png", "Sam-02_1.png", "Sam-02.png"] %>
+      <% images.each_with_index do |image, index| %>
+        <!-- On affiche seulement la première image au départ -->
+        <div data-carousel-target="slide" class="<%= index == 0 ? '' : 'hidden' %>">
+          <img src="<%= asset_path(image) %>" class="w-full drop-shadow" alt="Image du projet">
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Bouton Suivant (flèche droite) -->
+    <button 
+      data-action="click->carousel#next" 
+      class="flex-shrink-0 p-2 hover:opacity-80 transition"
+    >
+      <%= image_tag "arrow-right.svg", alt: "Suivant", class: "h-[75px] md:h-[200px]" %>
+    </button>
+  </div>
+</div>
+
+<div class="mx-8 my-8 md:my-16 md:mx-36">
+  <p class="text-center">
+    L'architecture, marquée par des lignes épurées et modernes, fait appel à des matériaux nobles et locaux tels que le tadelakt, le zellige et le bois, conférant à chaque espace une atmosphère à la fois chaleureuse et sophistiquée.
+  </p>
+</div>
+
+<div class="my-8 md:my-16 flex flex-col md:flex-row justify-evenly items-center">
+  <div class="icon-container">
+    <%= image_tag "icn-padel.svg", alt: "Icone terrain de padel", class:"icn-2" %>
+    <p class="icn-text">
+      Terrain de padel
+    </p>
+  </div>
+  <div class="icon-container">
+    <%= image_tag "icn-aj.svg", alt: "Icone aires de jeux", class:"icn-2"%>
+    <p class="icn-text">
+      Aires de jeux pour enfants
+    </p>
+  </div>
+  <div class="icon-container">
+    <%= image_tag "icn-ap.svg", alt: "Icone allée pietonnes", class:"icn-2"%>
+    <p class="icn-text">
+      Allées piétonnes
+    </p>
+  </div>
+  <div class="icon-container">
+    <%= image_tag "icn-rf.svg", alt: "Caméra de sécurité", class:"icn-2"%>
+    <p class="icn-text">
+      Résidence fermée et sécurisée
+    </p>
+  </div>
+  <div class="icon-container">
+    <%= image_tag "icn-ev.svg", alt: "espaces verts", class:"icn-2"%>
+    <p class="icn-text">
+      Espaces verts
+    </p>
+  </div>
+</div>
+
+<div class="my-8 md:my-16 relative">
+  <%= image_tag "diagonale.png", alt:"Image salon villa marrakech" %>
+  <div class="md:absolute md:w-[775px] md:top-[80px] md:right-[40px]">
+    <p class="text-justify bg-white bg-opacity-65 p-8">
+      Chaque pièce a été méticuleusement pensée pour maximiser la lumière naturelle, créant ainsi des volumes spacieux et ouverts sur des jardins verdoyants, offrant une expérience de vie où luxe et raffinement se rencontrent.
+    </p>
+  </div>
+</div>
+<div class="my-16">
+  <h2 class="text-center">
+    NOS VILLAS
+  </h2>
+  <div data-controller="modal">
+    <!-- Élément principal avec l'image cliquable -->
+    <div class="flex flex-col md:flex-row justify-start items-center mx-4 py-8 border-b-2 border-perse">
+      <%= image_tag "VILLA _G_RDC.png", class: "md:w-[600px] md:mx-8 cursor-pointer", data: { action: "click->modal#open" } %>
+      <div class="text-perse mt-2 md:mt-0">
+        <p class="md:w-[540px]">
+          Villa G <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis massa vitae. <br><br><br>
+          Superficie: 500m² <br>
+          Lorem Ipsum dolor : 4
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal (invisible par défaut grâce à "hidden") -->
+    <div data-modal-target="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="modal">
+      <div class="bg-white p-4 rounded-lg relative">
+        <!-- Bouton de fermeture -->
+        <button data-action="click->modal#close" class="absolute top-0 right-0 m-2 text-gray-500 text-2xl">&times;</button>
+
+        <!-- Carousel d'images -->
+        <div data-modal-target="carousel" class="carousel pt-6 md:pt-0">
+          <%= image_tag "VILLA _G_RDC.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _G_ETAGE.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _G_roof top.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div class="flex justify-between mt-4">
+          <button data-action="click->modal#prev" class="px-4 py-2 bg-ocre rounded text-white">Précédent</button>
+          <button data-action="click->modal#next" class="px-4 py-2 bg-ocre rounded text-white">Suivant</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-controller="modal">
+    <!-- Élément principal avec l'image cliquable -->
+    <div class="flex flex-col md:flex-row justify-start items-center mx-4 py-8 border-b-2 border-perse">
+      <%= image_tag "VILLA _L_RDC.png", class: "md:w-[600px] md:mx-8 cursor-pointer", data: { action: "click->modal#open" } %>
+      <div class="text-perse">
+        <p class="md:w-[540px] mt-2 md:mt-0">
+          Villa L <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis massa vitae. <br><br><br>
+          Superficie: 500m² <br>
+          Lorem Ipsum dolor : 4
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal (invisible par défaut grâce à "hidden") -->
+    <div data-modal-target="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="modal">
+      <div class="bg-white p-4 rounded-lg relative">
+        <!-- Bouton de fermeture -->
+        <button data-action="click->modal#close" class="absolute top-0 right-0 m-2 text-gray-500 text-2xl">&times;</button>
+
+        <!-- Carousel d'images -->
+        <div data-modal-target="carousel" class="carousel pt-6 md:pt-0">
+          <%= image_tag "VILLA _L_RDC.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _L_ETAGE.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _L_roof top.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div class="flex justify-between mt-4">
+          <button data-action="click->modal#prev" class="px-4 py-2 bg-ocre rounded text-white">Précédent</button>
+          <button data-action="click->modal#next" class="px-4 py-2 bg-ocre rounded text-white">Suivant</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-controller="modal">
+    <!-- Élément principal avec l'image cliquable -->
+    <div class="flex flex-col md:flex-row justify-start items-center mx-4 py-8 border-b-2 border-perse">
+      <%= image_tag "VILLA _M_RDC.png", class: "md:w-[600px] md:mx-8 cursor-pointer", data: { action: "click->modal#open" } %>
+      <div class="text-perse mt-2 md:mt-0">
+        <p class="md:w-[540px]">
+          Villa M <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis massa vitae. <br><br><br>
+          Superficie: 500m² <br>
+          Lorem Ipsum dolor : 4
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal (invisible par défaut grâce à "hidden") -->
+    <div data-modal-target="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="modal">
+      <div class="bg-white p-4 rounded-lg relative">
+        <!-- Bouton de fermeture -->
+        <button data-action="click->modal#close" class="absolute top-0 right-0 m-2 text-gray-500 text-2xl">&times;</button>
+
+        <!-- Carousel d'images -->
+        <div data-modal-target="carousel" class="carousel mt-2 md:mt-0">
+          <%= image_tag "VILLA _M_RDC.png", class: "w-[450px] w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _M_ETAGE.png", class: "w-[450px] w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _M_roof top.png", class: "w-[450px] w-[600px] md:mx-8" %>
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div class="flex justify-between mt-4">
+          <button data-action="click->modal#prev" class="px-4 py-2 bg-ocre rounded text-white">Précédent</button>
+          <button data-action="click->modal#next" class="px-4 py-2 bg-ocre rounded text-white">Suivant</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-controller="modal">
+    <!-- Élément principal avec l'image cliquable -->
+    <div class="flex flex-col md:flex-row justify-start items-center mx-4 py-8">
+      <%= image_tag "VILLA _P_RDC.png", class: "md:w-[600px] md:mx-8 cursor-pointer", data: { action: "click->modal#open" } %>
+      <div class="text-perse mt-2 md:mt-0">
+        <p class="md:w-[540px]">
+          Villa P <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis massa vitae. <br><br><br>
+          Superficie: 500m² <br>
+          Lorem Ipsum dolor : 4
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal (invisible par défaut grâce à "hidden") -->
+    <div data-modal-target="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="modal">
+      <div class="bg-white p-4 rounded-lg relative">
+        <!-- Bouton de fermeture -->
+        <button data-action="click->modal#close" class="absolute top-0 right-0 m-2 text-gray-500 text-2xl">&times;</button>
+
+        <!-- Carousel d'images -->
+        <div data-modal-target="carousel" class="carousel mt-2 md:mt-0">
+          <%= image_tag "VILLA _P_RDC.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _P_ETAGE.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+          <%= image_tag "VILLA _P_roof top.png", class: "w-[450px] md:w-[600px] md:mx-8" %>
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div class="flex justify-between mt-4">
+          <button data-action="click->modal#prev" class="px-4 py-2 bg-ocre rounded text-white">Précédent</button>
+          <button data-action="click->modal#next" class="px-4 py-2 bg-ocre rounded text-white">Suivant</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="carousel" class="relative w-full mx-auto my-12">
+  <!-- Contenu du carousel, placé au-dessus de l'arrière-plan -->
+  <div class="flex items-center justify-center relative z-10 bg-ocre py-8">
+    <!-- Bouton Précédent (flèche gauche) -->
+    <button 
+      data-action="click->carousel#prev" 
+      class="flex-shrink-0 p-2 hover:opacity-80 transition"
+    >
+      <%= image_tag "arrow-left.svg", alt: "Précédent", class: "h-[75px] md:h-[200px]" %>
+    </button>
+
+    <!-- Conteneur de l'image centrale -->
+    <div class="flex-shrink-0 relative w-[350px] md:w-[1170px]">
+      <% images = ["Kitchen-01.png", "Kitchen-01_1.png", "Kitchen-01_2.png"] %>
+      <% images.each_with_index do |image, index| %>
+        <!-- On affiche seulement la première image au départ -->
+        <div data-carousel-target="slide" class="<%= index == 0 ? '' : 'hidden' %>">
+          <img src="<%= asset_path(image) %>" class="w-full drop-shadow" alt="Image du projet">
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Bouton Suivant (flèche droite) -->
+    <button 
+      data-action="click->carousel#next" 
+      class="flex-shrink-0 p-2 hover:opacity-80 transition"
+    >
+      <%= image_tag "arrow-right.svg", alt: "Suivant", class: "h-[75px] md:h-[200px]" %>
+    </button>
+  </div>
+</div>
+
+<div class="my-4 flex flex-col justify-center items-center">
+  <h2 class="text-center">
+    TYPOLOGIES DES VILLAS
+  </h2>
+  <div class="flex items-center justify-evenly my-4 md:w-1/3">
+    <%= link_to "Villa G", villa_path("villa_g"), class:"text-main font-nimbus text-xl hover:underline", data: { turbo_frame: "villa_carousel" } %>
+    <%= link_to "Villa L", villa_path("villa_l"), class:"text-main font-nimbus text-xl hover:underline ml-4 md:ml-0", data: { turbo_frame: "villa_carousel" } %>
+    <%= link_to "Villa M", villa_path("villa_m"), class:"text-main font-nimbus text-xl hover:underline ml-4 md:ml-0", data: { turbo_frame: "villa_carousel" } %>
+    <%= link_to "Villa P", villa_path("villa_p"), class:"text-main font-nimbus text-xl hover:underline ml-4 md:ml-0", data: { turbo_frame: "villa_carousel" } %>
+  </div>
+</div>
+
+<!-- Turbo Frame dans lequel sera injecté le partial de la villa -->
+<%= render partial: "villas/villa_g", locals: { villa: "villa_g" } %>
+
+<div data-controller="modal" class="my-8 md:my-12 flex flex-col md:flex-row justify-center items-center">
+  <%= image_tag "Rooftop-02.png", alt: "photo rooftop Villa Botanik Garden 2", class:"w-[570px] dropshadow" %>
+  <div class="md:w-[570px] mx-8 md:ml-4 text-center">
+    <p class="text-justify my-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis massa vitae quam malesuada dictum. Nam sed augue quam. Proin ac turpis pharetra,
+    </p>
+    <!-- Bouton d'ouverture du modal -->
+    <button data-action="click->modal#open" class="text-white bg-ocre rounded-3xl px-4 py-2 text-2xl font-nimbus">
+      Télécharger notre brochure
+    </button>
+  </div>
+
+  <!-- Modal caché par défaut -->
+  <div data-modal-target="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div class="bg-white p-6 rounded-lg relative w-full max-w-lg">
+      <!-- Bouton de fermeture -->
+      <button data-action="click->modal#close" class="absolute top-2 right-2 text-gray-500 text-2xl">&times;</button>
+      <h2 class="text-2xl mb-4 text-center font-nimbus text-ocre">Télécharger la brochure</h2>
+      
+      <!-- Formulaire de contact -->
+      <%= form_with url: brochure_path, method: :post, local: true, html: { target: "download_iframe" } do |form| %>
+        <div class="mb-4">
+          <%= form.text_field :name, class: "w-full border-b-2 border-perse px-2 py-1 focus:outline-none text-perse", required: true, placeholder: "Nom" %>
+        </div>
+        <div class="mb-4">
+          <%= form.email_field :email, class: "w-full border-b-2 border-perse px-2 py-1 focus:outline-none text-perse", required: true, placeholder: "Email" %>
+        </div>
+        <div class="mb-4">
+          <%= form.telephone_field :phone, class: "w-full border-b-2 border-perse px-2 py-1 focus:outline-none text-perse", required: true, placeholder: "Téléphone" %>
+        </div>
+        <div class="mb-4">
+          <!-- Intégration du widget Google reCAPTCHA -->
+          <%= recaptcha_tags %>
+        </div>
+        <div class="flex justify-center">
+          <%= form.submit "Télécharger la brochure", class: "bg-ocre text-white px-4 py-2 rounded-full font-nimbus" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
+
+<iframe name="download_iframe" style="display: none;"></iframe>
+
+<div class="flex justify-center items-center">
+  <div class="w-[500px] mr-4">
+    <h3>Lorem ipsum dolor sit amet.</h3> <br>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>
+      Voluptas dolorem cupiditate fugit molestias voluptatum distinctio earum, quam autem quo nam quos vitae sapiente quis assumenda alias veritatis ab itaque commodi?
+    </p>
+  </div>
+
+  <div class="relative w-[600px] overflow-hidden select-none"
+     data-controller="draggable-carousel">
+    <!-- Conteneur des Images -->
+    <div class="flex transition-transform duration-300 ease-in-out drop-shadow-lg"
+        data-draggable-carousel-target="slides">
+      <%= image_tag "img-ferme.png", class: "min-w-[600px] h-auto flex-shrink-0 object-cover pointer-events-none drop-shadow-lg" %>
+      <%= image_tag "img-aire.png", class: "min-w-[600px] h-auto flex-shrink-0 object-cover pointer-events-none drop-shadow-lg" %>
+      <%= image_tag "img-vert.png", class: "min-w-[600px] h-auto flex-shrink-0 object-cover pointer-events-none drop-shadow-lg" %>
+      <%= image_tag "img-padel.png", class: "min-w-[600px] h-auto flex-shrink-0 object-cover pointer-events-none drop-shadow-lg" %>
+    </div>
+
+    <!-- Flèche Gauche -->
+    <button data-action="click->draggable-carousel#prev" class="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-30 rounded-full text-white p-2 hover:bg-opacity-60 transition z-10">
+      &larr;
+    </button>
+
+    <!-- Flèche Droite -->
+    <button data-action="click->draggable-carousel#next" class="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-30 rounded-full text-white p-2 hover:bg-opacity-60 transition z-10">
+      &rarr;
+    </button>
+
+    <!-- Indicateurs -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+      <span data-draggable-carousel-target="indicator" data-index="0" class="w-2 h-2 bg-white rounded-full opacity-100"></span>
+      <span data-draggable-carousel-target="indicator" data-index="1" class="w-2 h-2 bg-white rounded-full opacity-50"></span>
+      <span data-draggable-carousel-target="indicator" data-index="2" class="w-2 h-2 bg-white rounded-full opacity-50"></span>
+      <span data-draggable-carousel-target="indicator" data-index="3" class="w-2 h-2 bg-white rounded-full opacity-50"></span>
+    </div>
+  </div>
+<%# Remplacer carousel par rounded image w/ padding %>
+</div>
