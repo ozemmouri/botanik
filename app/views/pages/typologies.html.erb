@@ -13,44 +13,9 @@
   </h2>
 </div>
 
-<!-- 1st carousel -->
-<% images = [
-  "M-1.jpg","M-2.png","M-3.png",
-  "P-1.jpg","P-2.jpg","P-3.jpg","P-4.jpg",
-  "G-1.jpg","G-2.jpg","G-3.jpg","G-4.jpg",
-  "L-1.jpg","L-2.png","L-3.png","L-4.jpg"
-] %>
 
-<div data-controller="carousel" class="relative w-full mx-auto pb-10 mb-8 md:mb-0">
-  <div class="absolute bottom-0 left-2 right-2 md:left-10 md:right-10 h-3/4 bg-nude"></div>
 
-  <div class="flex items-center justify-center relative z-10">
-    <button data-action="click->carousel#prev" class="md:p-2 hover:opacity-80 transition">
-      <%= image_tag "arrow-left-bis.svg", alt: "Précédent", class: "w-[70px] md:w-[125px]" %>
-    </button>
 
-    <div class="relative overflow-hidden flex-shrink-0
-                w-[350px] md:w-[950px] h-[200px] md:h-[528px]">
-      <% images.each_with_index do |image, index| %>
-        <div data-carousel-target="slide" class="slide absolute inset-0"
-             style="transform: translateX(<%= index * 100 %>%);">
-          <div data-parallax-scroll-carousel-target="image"
-               class="w-full h-full will-change-transform overflow-hidden">
-            <%= image_tag image,
-                  class: "w-full h-full object-cover drop-shadow",
-                  loading: "eager",
-                  decoding: "sync",
-                  fetchpriority: "high" %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-
-    <button data-action="click->carousel#next" class="md:p-2 hover:opacity-80 transition">
-      <%= image_tag "arrow-right-bis.svg", alt: "Suivant", class: "w-[70px] md:w-[125px]" %>
-    </button>
-  </div>
-</div>
 
 <!-- Secondary text -->
 
@@ -126,7 +91,7 @@
     <!-- Texte et bouton qui ouvre le modal -->
     <div class="md:mx-60 mx-8 md:-mt-16 -mt-8">
       <p class="relative text-center bg-white z-30 py-12 md:px-12 text-main">
-        Villa JENNAH <br><br>
+        <span class="font-playfair text-ocre text-2xl">Villa JENNAH</span> <br><br>
         Incarnation du luxe sans compromis ; vastes pièces de réception
         baignées de lumière, suites panoramiques et piscine privée. <br><br>
         Superficies terrains : 721m2 à 1158m2 <br>
@@ -186,7 +151,7 @@
     <!-- Texte et bouton qui ouvre le modal -->
     <div class="mx-8 md:mx-60 -mt-8 md:-mt-16">
       <p class="relative text-center bg-white z-30 py-12 md:px-12 text-main">
-          Villa NOOR <br><br>
+          <span class="font-playfair text-ocre text-2xl">Villa NOOR</span> <br><br>
           Personnalisation totale des volumes & finitions pour répondre aux exigences les plus élevées. <br><br><br>
           Superficies terrains : 856m2 à 1810m2 <br>
           Superficie construite : 522m2<br>
@@ -244,7 +209,7 @@
     <!-- Texte et bouton qui ouvre le modal -->
     <div class="mx-8 md:mx-60 -mt-8 md:-mt-16">
       <p class="relative text-center bg-white z-30 py-12 md:px-12 text-main">
-          Villa AYLA <br><br>
+          <span class="font-playfair text-ocre text-2xl">Villa AYLA</span> <br><br>
           Harmonie parfaite entre volumes généreux et fonctionnalité ; idéale pour les grandes familles. <br><br><br>
           Superficies terrains : 502m2 à 752m2 <br>
           Superficie construite : 446m2<br>
@@ -358,7 +323,7 @@
   <%= image_tag "Rooftop-02.png", alt: "photo rooftop Villa Botanik Garden 2", class:"w-[570px] dropshadow" %>
   <div class="md:w-[500px] md:px-4 mx-8 md:ml-4 text-center">
     <!-- Bouton d'ouverture du modal -->
-    <button data-action="click->modal#open" class="text-white bg-ocre rounded-3xl px-4 py-2 text-2xl font-nimbus">
+    <button data-action="click->modal#open" class="text-white bg-ocre rounded-3xl px-4 py-2 text-2xl font-playfair">
       Télécharger notre brochure
     </button>
   </div>

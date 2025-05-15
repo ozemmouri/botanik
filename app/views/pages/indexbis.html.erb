@@ -698,3 +698,98 @@
     </div>
   </div>
 </div>
+
+<div class="flex flex-col md:flex-row justify-evenly items-center my-8 md:mx-20 overflow-hidden">
+  <!-- Élément 1 – Aéroport -->
+  <div class="flex flex-col">
+    <div 
+      data-controller="parallax-scroll" 
+      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
+    >
+      <%= image_tag "aeroport.png", 
+            class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
+            data: { "parallax-scroll-target" => "image" } %>
+    </div>
+    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+      <p class="text-ocre font-montserrat text-lg text-center">
+        <span class="italic text-2xl">10 minutes</span><br> 
+        Aéroport Menara Marrakech
+      </p>
+    </div>
+  </div>
+  
+  <!-- Élément 2 – Golf -->
+  <div class="flex flex-col">
+    <div 
+      data-controller="parallax-scroll" 
+      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
+    >
+      <%= image_tag "golf.png", 
+              class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
+              data: { "parallax-scroll-target" => "image" } %>
+    </div>
+    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+      <p class="text-ocre font-montserrat text-lg text-center">
+        <span class="italic text-2xl">5 minutes</span> <br>
+        Parcours golfiques
+      </p>
+    </div>
+  </div>
+  
+  <!-- Élément 3 – Avenue -->
+  <div class="flex flex-col">
+    <div 
+      data-controller="parallax-scroll" 
+      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
+    >
+      <%= image_tag "avenue.png", 
+              class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
+              data: { "parallax-scroll-target" => "image" } %>
+    </div>
+    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+      <p class="text-ocre text-lg font-montserrat text-center">
+        <span class="italic text-2xl">5 minutes</span><br>
+        Avenue Mohammed V
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- 1st carousel -->
+<% images = [
+  "M-1.jpg","M-2.png","M-3.png",
+  "P-1.jpg","P-2.jpg","P-3.jpg","P-4.jpg",
+  "G-1.jpg","G-2.jpg","G-3.jpg","G-4.jpg",
+  "L-1.jpg","L-2.png","L-3.png","L-4.jpg"
+] %>
+
+<div data-controller="carousel" class="relative w-full mx-auto pb-10 mb-8 md:mb-0">
+  <div class="absolute bottom-0 left-2 right-2 md:left-10 md:right-10 h-3/4 bg-nude"></div>
+
+  <div class="flex items-center justify-center relative z-10">
+    <button data-action="click->carousel#prev" class="md:p-2 hover:opacity-80 transition">
+      <%= image_tag "arrow-left-bis.svg", alt: "Précédent", class: "w-[70px] md:w-[125px]" %>
+    </button>
+
+    <div class="relative overflow-hidden flex-shrink-0
+                w-[350px] md:w-[950px] h-[200px] md:h-[528px]">
+      <% images.each_with_index do |image, index| %>
+        <div data-carousel-target="slide" class="slide absolute inset-0"
+             style="transform: translateX(<%= index * 100 %>%);">
+          <div data-parallax-scroll-carousel-target="image"
+               class="w-full h-full will-change-transform overflow-hidden">
+            <%= image_tag image,
+                  class: "w-full h-full object-cover drop-shadow",
+                  loading: "eager",
+                  decoding: "sync",
+                  fetchpriority: "high" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <button data-action="click->carousel#next" class="md:p-2 hover:opacity-80 transition">
+      <%= image_tag "arrow-right-bis.svg", alt: "Suivant", class: "w-[70px] md:w-[125px]" %>
+    </button>
+  </div>
+</div>

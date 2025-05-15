@@ -15,7 +15,8 @@ module.exports = {
         nimbus: ['NimbusRomNo9', 'serif'],
         chaparral: ['Chaparral', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
-        carattere: ['Carattere', 'serif']
+        carattere: ['Carattere', 'serif'],
+        playfair: ['Playfair', 'serif']
       },
       colors: {
         'nude': '#EBE4D9',

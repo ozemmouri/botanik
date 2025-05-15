@@ -2,7 +2,7 @@
 
 </div>
 <div data-controller="fade-scroll" class="flex flex-col justify-center items-center py-4 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-  <h2 class="italic text-center text-main">
+  <h2 class="italic text-center text-main font-nimbus">
     LE DOMAINE OU LE LUXE SE FAIT SILENCE
   </h2>
 </div>
@@ -25,64 +25,10 @@
   </h2>
 </div>
 
-<div class="flex flex-col md:flex-row justify-evenly items-center my-8 md:mx-20 overflow-hidden">
-  <!-- Élément 1 – Aéroport -->
-  <div class="flex flex-col">
-    <div 
-      data-controller="parallax-scroll" 
-      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
-    >
-      <%= image_tag "aeroport.png", 
-            class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
-            data: { "parallax-scroll-target" => "image" } %>
-    </div>
-    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-      <p class="text-ocre font-montserrat text-lg text-center">
-        <span class="italic text-2xl">10 minutes</span><br> 
-        Aéroport Menara Marrakech
-      </p>
-    </div>
-  </div>
-  
-  <!-- Élément 2 – Golf -->
-  <div class="flex flex-col">
-    <div 
-      data-controller="parallax-scroll" 
-      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
-    >
-      <%= image_tag "golf.png", 
-              class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
-              data: { "parallax-scroll-target" => "image" } %>
-    </div>
-    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-      <p class="text-ocre font-montserrat text-lg text-center">
-        <span class="italic text-2xl">5 minutes</span> <br>
-        Parcours golfiques
-      </p>
-    </div>
-  </div>
-  
-  <!-- Élément 3 – Avenue -->
-  <div class="flex flex-col">
-    <div 
-      data-controller="parallax-scroll" 
-      class="w-[400px] h-[265px] relative overflow-hidden mt-4 md:mt-0"
-    >
-      <%= image_tag "avenue.png", 
-              class:"drop-shadow-lg absolute inset-0 w-full h-full object-cover", 
-              data: { "parallax-scroll-target" => "image" } %>
-    </div>
-    <div data-controller="fade-scroll" class="flex items-center justify-center my-2 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-      <p class="text-ocre text-lg font-montserrat text-center">
-        <span class="italic text-2xl">5 minutes</span><br>
-        Avenue Mohammed V
-      </p>
-    </div>
-  </div>
-</div>
+
 <div class="bg-nude my-8 md:mx-20 flex-col lg:flex-row flex justify-center items-center">
   <div data-controller="fade-scroll" class="lg:w-[600px] mx-12 pt-4 lg:pt-0 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-    <h3 class="text-2xl font-chaparral">Un Emplacement d’Exception Entre Ville, Nature et Loisirs</h3>
+    <h3 class="text-2xl font-montserrat">Un Emplacement d’Exception Entre Ville, Nature et Loisirs</h3>
     <br><br>
     <p class="text-justify text-base">
     Situé sur la route d’Amezmiz vers l’Ourika, ce domaine de villas de prestige vous offre un cadre de vie unique où chaque instant se pare de beauté et d’authenticité. À seulement 15 minutes du cœur vibrant de la médina de Marrakech, laissez-vous séduire par l’effervescence des souks, des monuments historiques et des ruelles animées. En 20 minutes, gagnez l’aéroport Menara pour vos escapades à l’international, ou plongez dans l’univers coloré du Jardin Majorelle et du Musée Yves Saint Laurent, véritables joyaux culturels.
@@ -103,7 +49,7 @@
     </div>
 
     <div>
-      <h2 class="text-white mx-2 md:mx-8 pt-4 md:pt-0 pb-8 font-chaparral">
+      <h2 class="text-white mx-2 md:mx-8 pt-4 md:pt-0 pb-8 font-montserrat">
         Botanik Garden – L’architecture au service de la nature
       </h2>
       <div data-controller="fade-scroll" class="flex flex-col md:flex-row opacity-0 translate-y-4 transition-all duration-[1500ms]">
@@ -131,17 +77,31 @@
     </div>
   </div>
 </div>
-<div class="flex justify-center items-center ">
-  <div data-controller="fade-scroll" class="flex flex-col justify-center items-center bg-ocre py-4 px-4 md:px-48 opacity-0 translate-y-4 transition-all duration-[1500ms] mx-4 md:mx-20">
-    <h2 class="text-white py-4 font-montserrat text-center">Une composition harmonieuse, pensée pour offrir à chaque villa intimité, lumière et sérénité</h2>
-    <div>
-      <%= image_tag "plandemasse.png"%>
+<div class="bg-ocre my-8 md:mx-20 flex-col flex justify-center items-center">
+  <h3 class="text-2xl font-montserrat text-white pt-8">Une composition harmonieuse, pensée pour offrir à chaque villa intimité, lumière et sérénité</h3>
+  <div class="flex-col flex justify-center items-center md:flex-row">
+    <div data-controller="fade-scroll" class="mx-12 pt-4 lg:pt-0 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+      <ul class="text-white text-center">
+        <li class="text-white">
+          <span class="italic text-2xl font-montserrat">10 minutes</span><br> 
+          Aéroport Menara Marrakech
+        </li>
+        <li class="text-white my-4">
+          <span class="italic text-2xl font-montserrat">5 minutes</span> <br>
+          Parcours golfiques
+        </li>
+        <li class="text-white">
+          <span class="italic text-2xl font-montserrat">5 minutes</span><br>
+          Avenue Mohammed V       
+        </li>
+      </ul>
     </div>
+    <%= image_tag "plandemasse.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[400px] lg:w-[650px] py-8" %>
   </div>
-</div>
 
+</div>
 <div  id="concept" class="flex justify-center items-center md:mx-40 mt-8 mx-8 text-center">
-  <h3 data-controller="fade-scroll" class="opacity-0 translate-y-4 transition-all duration-[1500ms] font-chaparral">
+  <h3 data-controller="fade-scroll" class="opacity-0 translate-y-4 transition-all duration-[1500ms] font-montserrat">
     Des villas d’exception, conçues pour une vie en harmonie avec la nature
   </h3>
 </div>
@@ -158,7 +118,7 @@
 <div class="md:mx-10 md:relative">
   <!-- Utilisation d'une marge négative pour faire chevaucher l'encart sur l'image -->
   <div data-controller="fade-scroll" class="bg-white md:w-[600px] py-8 px-12 flex justify-center items-center md:-mt-40 md:ml-20">
-    <h3 class="text-main text-center text-lg font-chaparral">
+    <h3 class="text-main text-justify text-lg font-montserrat">
       Pensé comme un havre de tranquillité aux portes de Marrakech, Botanik Garden
       redéfinit l’habitat urbain en préservant l’intimité. Chaque villa, protégée par des
       façades aveugles, s'ouvre sur des jardins intérieurs, patios végétalisés et terrasses,
@@ -173,13 +133,13 @@
 
 
 <div class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-2 md:mx-10 py-[50px]">
-  <%= image_tag "collage-1.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[354px] md:w-auto md:h-[516px] mb-[8px] md:mb-0 md:mr-[8px] drop-shadow-xl" %>
+  <%= image_tag "P-1-c.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[354px] md:w-auto md:h-[516px] mb-[8px] md:mb-0 md:mr-[8px] drop-shadow-xl" %>
   <div class="flex flex-col">
     <div class="flex mb-[8px]">
-      <%= image_tag "collage-2.png", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] mr-[4px] md:mr-[8px] drop-shadow-xl" %>
-      <%= image_tag "collage-3.png", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] drop-shadow-xl" %>
+      <%= image_tag "L-2-c.png", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] mr-[4px] md:mr-[8px] drop-shadow-xl" %>
+      <%= image_tag "M-1-c.png", data: { controller: "slide-in", "slide-in-direction-value": "left" }, class:"w-[175px] md:w-auto md:h-[250px] drop-shadow-xl" %>
     </div>
-    <%= image_tag "collage-4.png", class:"w-[354px] md:w-auto md:h-[258px] drop-shadow-xl" %>
+    <%= image_tag "G-2-c.png", class:"w-[354px] md:w-auto md:h-[258px] drop-shadow-xl" %>
   </div>
 </div>
 
