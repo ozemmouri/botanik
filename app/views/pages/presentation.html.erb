@@ -26,9 +26,9 @@
 </div>
 
 
-<div class="bg-nude my-8 md:mx-20 flex-col lg:flex-row flex justify-center items-center">
-  <div data-controller="fade-scroll" class="lg:w-[600px] mx-12 pt-4 lg:pt-0 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-    <h3 class="text-2xl font-montserrat">Un Emplacement d’Exception Entre Ville, Nature et Loisirs</h3>
+<div class="bg-nude my-8 md:mx-20 flex-col lg:flex-row flex justify-center items-center py-8">
+  <div data-controller="fade-scroll" class="lg:w-[400px] mx-12 pt-4 lg:pt-0 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+    <h3 class="text-2xl font-playfair">Un Emplacement d’Exception Entre Ville, Nature et Loisirs</h3>
     <br><br>
     <p class="text-justify text-base">
     Situé sur la route d’Amezmiz vers l’Ourika, ce domaine de villas de prestige vous offre un cadre de vie unique où chaque instant se pare de beauté et d’authenticité. À seulement 15 minutes du cœur vibrant de la médina de Marrakech, laissez-vous séduire par l’effervescence des souks, des monuments historiques et des ruelles animées. En 20 minutes, gagnez l’aéroport Menara pour vos escapades à l’international, ou plongez dans l’univers coloré du Jardin Majorelle et du Musée Yves Saint Laurent, véritables joyaux culturels.
@@ -36,7 +36,23 @@
     Pour les passionnés de golf et de détente, les parcours renommés de La Noria, du Royal Palm et d’Assoufid se trouvent à moins de 15 minutes en voiture. Et lorsque l’appel de la nature se fait sentir, partez à l’aventure dans les montagnes de l’Atlas, accessibles en seulement 30 minutes, pour des panoramas époustouflants et des activités en plein air inoubliables.
     </p>
   </div>
-  <%= image_tag "map botanic orange.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[400px] lg:w-[550px] py-8" %>
+  <%= image_tag "map botanic orange.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[400px] lg:w-[450px] py-12" %>
+  <div data-controller="fade-scroll" class="mx-12 pt-4 lg:pt-0 opacity-0 translate-y-4 transition-all duration-[1500ms]">
+    <ul class="text-white text-center">
+      <li class="text-main">
+        <span class="italic text-2xl font-playfair">10 minutes</span><br> 
+        Aéroport Menara Marrakech
+      </li>
+      <li class="text-main my-4">
+        <span class="italic text-2xl font-playfair">5 minutes</span> <br>
+        Parcours golfiques
+      </li>
+      <li class="text-main">
+        <span class="italic text-2xl font-playfair">5 minutes</span><br>
+        Avenue Mohammed V       
+      </li>
+    </ul>
+  </div>
 </div>
 <div class="my-8 md:px-12  px-4 py-8 mx-4 md:mx-20 bg-archi text-white">
   <div class="flex flex-col md:flex-row justify-between items-center">
@@ -49,7 +65,7 @@
     </div>
 
     <div>
-      <h2 class="text-white mx-2 md:mx-8 pt-4 md:pt-0 pb-8 font-montserrat">
+      <h2 class="text-white mx-2 md:mx-8 pt-4 md:pt-0 pb-8 font-playfair">
         Botanik Garden – L’architecture au service de la nature
       </h2>
       <div data-controller="fade-scroll" class="flex flex-col md:flex-row opacity-0 translate-y-4 transition-all duration-[1500ms]">
@@ -78,24 +94,8 @@
   </div>
 </div>
 <div class="bg-nude my-8 md:mx-20 flex-col flex justify-center items-center">
-  <h3 class="text-2xl font-montserrat text-ocre pt-8">Une composition harmonieuse, pensée pour offrir à chaque villa intimité, lumière et sérénité</h3>
+  <h3 class="text-2xl font-playfair text-ocre pt-8">Une composition harmonieuse, pensée pour offrir à chaque villa intimité, lumière et sérénité</h3>
   <div class="flex-col flex justify-center items-center md:flex-row">
-    <div data-controller="fade-scroll" class="mx-12 pt-4 lg:pt-0 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-      <ul class="text-white text-center">
-        <li class="text-ocre">
-          <span class="italic text-2xl font-montserrat">10 minutes</span><br> 
-          Aéroport Menara Marrakech
-        </li>
-        <li class="text-ocre my-4">
-          <span class="italic text-2xl font-montserrat">5 minutes</span> <br>
-          Parcours golfiques
-        </li>
-        <li class="text-ocre">
-          <span class="italic text-2xl font-montserrat">5 minutes</span><br>
-          Avenue Mohammed V       
-        </li>
-      </ul>
-    </div>
     <%= image_tag "plandemasse.png", data: { controller: "slide-in", "slide-in-direction-value": "right" }, class:"w-[400px] lg:w-[650px] py-8" %>
   </div>
 
