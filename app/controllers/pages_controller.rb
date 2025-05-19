@@ -2,9 +2,9 @@ class PagesController < ApplicationController
 
   def index
     @slides = [
-      { image_url: "villa_nuit.jpg", title: "Le Projet", description: "Le domaine où le luxe se fait silence", cta: "Découvrez le projet Botanik Garden", link: presentation_path },
-      { image_url: "villa_type_D_1.jpg", title: "Nos Villas", description: "Découvrez nos villas", cta: "Votre oasis sur-mesure", link: typologies_path },
-      { image_url: "villa_type_D_2.jpg", title: "Aedge Partners", description: "Qui sommes nous ?", cta: "En savoir plus", link: aedge_path },
+      { image_url: "index-1.jpg", title: "Le Projet", description: "Le domaine où le luxe se fait silence", cta: "Découvrez le projet Botanik Garden", link: presentation_path },
+      { image_url: "index-2.jpg", title: "Nos Villas", description: "Découvrez nos villas", cta: "Votre oasis sur-mesure", link: typologies_path },
+      { image_url: "index-3.jpg", title: "Aedge Partners", description: "Qui sommes nous ?", cta: "En savoir plus", link: aedge_path },
     ]
   end
 
