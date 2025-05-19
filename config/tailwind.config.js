@@ -26,6 +26,9 @@ module.exports = {
         'mainbis': '#FDFDFA',
         'submenu': "#735f45",
         'archi': "#546A63"
+      },      
+      backgroundImage: {
+        'divider-gradient': 'linear-gradient(to right, rgba(185, 88, 52, 0), rgba(185, 88, 52, 0.5), rgba(185, 88, 52, 0))',
       },
     },
   },

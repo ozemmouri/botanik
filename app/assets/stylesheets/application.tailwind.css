@@ -112,7 +112,9 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  
+  .divider {
+    @apply w-[60%] h-[1px] bg-divider-gradient my-5;
+  }
 
   
 }
