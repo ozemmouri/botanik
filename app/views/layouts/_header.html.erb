@@ -45,22 +45,22 @@
           <div data-modal-target="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">
             <div class="bg-white py-12 px-24 relative w-[900px] max-w-[1200px] drop-shadow-xl">
               <button data-action="click->modal#close" class="absolute top-2 right-2 text-main text-2xl z-50">&times;</button>
-              <h2 class="text-2xl mb-4 text-center font-tenor text-main tracking-[0.02rem]">Télécharger la brochure</h2>
+              <h2 class="text-2xl mb-4 text-center font-playfair text-main tracking-[0.02rem]">Télécharger la brochure</h2>
               <%= form_with url: brochure_path, method: :post, local: true, html: { target: "download_iframe" } do |form| %>
                 <div class="mb-4">
-                  <%= form.text_field :name, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Nom" %>
+                  <%= form.text_field :name, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main font-playfair", required: true, placeholder: "Nom" %>
                 </div>
                 <div class="mb-4">
-                  <%= form.email_field :email, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Email" %>
+                  <%= form.email_field :email, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main font-playfair", required: true, placeholder: "Email" %>
                 </div>
                 <div class="mb-4">
-                  <%= form.telephone_field :phone, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main", required: true, placeholder: "Téléphone" %>
+                  <%= form.telephone_field :phone, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main font-playfair", required: true, placeholder: "Téléphone" %>
                 </div>
                 <div class="mb-4">
                   <%= recaptcha_tags %>
                 </div>
                 <div class="flex justify-center">
-                  <%= form.submit "Télécharger la brochure", class: "bg-main text-white px-4 py-2 rounded-full font-tenor tracking-[0.02rem]" %>
+                  <%= form.submit "Télécharger la brochure", class: "bg-main text-white px-4 py-2 rounded-full font-playfair tracking-[0.02rem]" %>
                 </div>
               <% end %>
             </div>
