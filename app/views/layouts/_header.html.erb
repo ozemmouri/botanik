@@ -30,7 +30,7 @@
         <li class="<%= current_page?(mot_architecte_path) ? 'text-gray-700 font-semibold' : 'text-white md:text-main'  md:px-4 transition-all hover:underline hover:underline-offset-4">
           <%= link_to "Mot de l'architecte", mot_architecte_path %>
         </li>
-        <li class="<%= current_page?(typologies_path) ? 'font-semibold' : 'text-main md:text-main' %> md:px-4 transition-all hover:text-black">
+        <li class=" hidden <%= current_page?(typologies_path) ? 'font-semibold' : 'text-main md:text-main' %> md:px-4 transition-all hover:text-black">
           <%= link_to "Nos villas", typologies_path %>
         </li>
         <li class="<%= current_page?(aedge_path) ? 'font-semibold' : 'text-main md:text-main' %> md:px-4 transition-all hover:text-black">
