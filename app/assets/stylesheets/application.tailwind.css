@@ -121,17 +121,17 @@
 
 
 h1 {
-  @apply font-montserrat text-4xl tracking-[0.02rem];
+  @apply font-playfair text-4xl tracking-[0.02rem];
 }
 h2 {
-  @apply font-montserrat text-xl md:text-2xl text-main tracking-[0.02rem];
+  @apply font-playfair text-xl md:text-2xl text-main tracking-[0.02rem];
 }
 h3 {
-  @apply font-montserrat text-xl text-main tracking-[0.02rem];
+  @apply font-playfair text-xl text-main tracking-[0.02rem];
 }
 p {
-  @apply font-montserrat text-lg md:text-xl text-main tracking-[0.02rem];
+  @apply font-playfair text-lg md:text-xl text-main tracking-[0.02rem];
 }
 li {
-  @apply font-montserrat text-xl md:text-sm text-main tracking-[0.02rem];
+  @apply font-tenor text-xl md:text-sm text-main tracking-[0.02rem];
 }

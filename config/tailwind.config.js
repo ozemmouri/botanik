@@ -16,7 +16,8 @@ module.exports = {
         chaparral: ['Chaparral', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         carattere: ['Carattere', 'serif'],
-        playfair: ['Playfair', 'serif']
+        playfair: ['Playfair', 'serif'],
+        tenor: ['Tenor', 'sans-serif']
       },
       colors: {
         'nude': '#EBE4D9',
