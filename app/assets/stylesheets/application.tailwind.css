@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: 'TenorSans';
+  src: url('/assets/TenorSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair';
+  src: asset-url('PlayfairDisplay-Regular.ttf') format('truetype');
+  /* Pour une police variable, vous pouvez indiquer une plage de font-weight si besoin :
+     font-weight: 100 900; */
+  font-display: swap;
+}
 
 @layer components {
   .btn-primary {

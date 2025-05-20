@@ -17,7 +17,7 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
         carattere: ['Carattere', 'serif'],
         playfair: ['Playfair', 'serif'],
-        tenor: ['Tenor', 'sans-serif']
+        tenor: ['TenorSans', 'sans-serif']
       },
       colors: {
         'nude': '#EBE4D9',
