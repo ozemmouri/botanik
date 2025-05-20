@@ -1,4 +1,4 @@
-<div class="bg-cover bg-center md:bg-fixed mt-[80px] md:mx-10 h-[82vh]" style="background-image: url('<%= asset_path("index-3.jpg") %>');">
+<div class="bg-contain bg-center md:bg-fixed mt-[80px] md:mx-10 h-[82vh]" style="background-image: url('<%= asset_path("hero-3.jpg") %>');">
 
 </div>
 <div data-controller="fade-scroll" class="flex flex-col justify-center items-center py-4 opacity-0 translate-y-4 transition-all duration-[1500ms]">
@@ -223,7 +223,7 @@
   </div>
 
 </div>
-<div class="mt-16 mb-8 mx-4 md:mx-0">
+<div id="nos-villas"  class="mt-16 mb-8 mx-4 md:mx-0">
   <h2 class="text-center text-ocre font-playfair font-semibold italic">
     NOS VILLAS
   </h2>
@@ -509,18 +509,21 @@
 
 <%# … tout votre contenu de page … %>
 
-<div data-controller="modal">
-  <!-- Bouton “Plan de masse” pivoté et flush à droite -->
+<div
+  data-controller="plan-toggle modal"
+  data-plan-toggle-section-id-value="nos-villas"
+>
+  <!-- Bouton Plan de masse caché / pivoté / flush à droite -->
   <button
+    data-plan-toggle-target="button"
     type="button"
     data-action="click->modal#open"
-    class="fixed top-1/2 right-5
-           transform translate-y-1/2 origin-right rotate-90
-           bg-ocre text-white font-montserrat text-base
-           px-4 py-2 z-40"
+    class="fixed top-1/2 right-5 transform translate-y-1/2 origin-right rotate-90
+           bg-ocre text-white font-montserrat text-base px-4 py-2 z-40"
   >
     Plan de masse
   </button>
+
 
 <div data-modal-target="modal"
      class="hidden fixed inset-0 flex items-center justify-center
