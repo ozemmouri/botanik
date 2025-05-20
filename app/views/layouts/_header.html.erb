@@ -24,7 +24,7 @@
       <%= link_to (image_tag "logo-main.svg", class:"md:hidden w-[250px]"), root_path %>
       <ul class="flex flex-col gap-y-7 md:flex-row md:gap-2 items-center">
         <li class="<%= current_page?(presentation_path) ? 'font-semibold' : 'text-main md:text-main' %> md:px-4 transition-all hover:text-black">
-          <%= link_to "Le Projet", presentation_path %>
+          <%= link_to "LE PROJET", presentation_path %>
         </li>
         <%# 
         <li class="<%= current_page?(mot_architecte_path) ? 'text-gray-700 font-semibold' : 'text-white md:text-main'  md:px-4 transition-all hover:underline hover:underline-offset-4">
@@ -38,8 +38,8 @@
         </li>
         <div data-controller="modal" class="flex justify-center items-center z-50">
           <button data-action="click->modal#open"
-                  class="pointer-events-auto text-white px-4 py-2 text-xl md:text-sm bg-main font-tenor tracking-[0.02rem] rounded-full">
-            Contactez-nous
+                  class="pointer-events-auto text-white px-4 py-2 text-xl md:text-sm bg-ocre font-tenor tracking-[0.02rem] rounded-full">
+            CONTACTEZ-NOUS
           </button>
 
           <div data-modal-target="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">

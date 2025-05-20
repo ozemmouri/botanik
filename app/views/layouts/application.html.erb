@@ -38,13 +38,13 @@
     }
   </script>
 
-  <body class="<%= 'overflow-y-hidden' if current_page?(root_path) %>">
+  <body>
 
     <%= render "layouts/header" %>
     <main>
       <%= yield %>
     </main>
-    <% unless controller_name == "pages" && action_name == "index" %>
+    <% unless controller_name == "pages" && action_name == "indexter" %>
       <%= render "layouts/footer" %>
     <% end %>
     <% if params[:download] %>
