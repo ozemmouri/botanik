@@ -2,7 +2,7 @@
 
 </div>
 <div data-controller="fade-scroll" class="flex flex-col justify-center items-center py-4 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-  <h2 class="italic text-center text-main font-playfair">
+  <h2 class="text-center text-main font-playfair">
     LE DOMAINE OU LE LUXE SE FAIT SILENCE
   </h2>
 </div>
@@ -77,7 +77,7 @@
 
 
 
-<div class="my-8 md:px-12  px-4 py-8 mx-4 md:mx-20 bg-archi text-white">
+<div id="concept" class="my-8 md:px-12  px-4 py-8 mx-4 md:mx-20 bg-archi text-white">
   <div class="flex flex-col md:flex-row justify-between items-center">
     <div data-controller="slide-in" data-slide-in-direction-value="left" class="flex flex-col items-center justify-between min-w-[300px]">
       <%= image_tag "kacem-photo.jpg", class:"w-[350px]" %>
@@ -117,7 +117,7 @@
   </div>
 </div>
 
-<div  id="concept" class="flex justify-center items-center md:mx-40 mt-8 mx-8 text-center">
+<div  class="flex justify-center items-center md:mx-40 mt-8 mx-8 text-center">
 
 </div>
 
@@ -125,7 +125,7 @@
 <div class="relative h-[550px] overflow-hidden md:mx-10 my-12">
   <!-- Background : l'image en fond -->
   <div class="absolute inset-0 md:bg-fixed bg-center bg-cover" 
-       style="background-image: url('<%= asset_path("Diagonale-02_1.png") %>');">
+       style="background-image: url('<%= asset_path("parralax-gate.jpg") %>');">
   </div>
 </div>
 
@@ -135,7 +135,7 @@
   <div data-controller="fade-scroll" class="bg-white md:w-[675px] py-8 px-12 flex justify-center items-center md:-mt-56 md:ml-20">
     <h3 class="text-main text-justify text-lg font-playfair">
       <span class="font-playfair italic text-ocre text-xl font-bold">
-        Des villas d’exception, conçues pour une vie en harmonie avec la nature <br><br>
+        Des villas d’exception, conçues pour une vie en harmonie avec la nature <br>
       </span>
       Pensé comme un havre de tranquillité aux portes de Marrakech, Botanik Garden
       redéfinit l’habitat urbain en préservant l’intimité. Chaque villa, protégée par des
@@ -150,7 +150,7 @@
 </div>
 
 
-<div class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-2 md:mx-10 py-[50px]">
+<div id="equipements" class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-2 md:mx-10 py-[50px]">
   <%= image_tag "2-2.jpg", class:"w-[354px] md:w-auto md:h-[516px] mb-[8px] md:mb-0 md:mr-[8px] drop-shadow-xl" %>
   <div class="flex flex-col">
     <div class="flex mb-[8px]">
@@ -169,10 +169,9 @@
   class="mt-[60px] flex flex-col justify-center my-8 items-center text-center
          mx-4 md:mx-52 opacity-0 translate-y-4 transition-all duration-[1500ms]"
 >
-  <h2 id="typologies" class="italic text-center">
+  <h2  class="italic text-center">
     L'architecture, marquée par des lignes épurées et modernes, fait appel
-    à des matériaux nobles et locaux tels que le tadelakt, le zellige et
-    le bois, conférant à chaque espace une atmosphère à la fois chaleureuse
+    à des matériaux nobles, conférant à chaque espace une atmosphère à la fois chaleureuse
     et sophistiquée.
   </h2>
 </div>
@@ -227,7 +226,7 @@
 
 </div>
 <div id="nos-villas"  class="mt-16 mb-8 mx-4 md:mx-0">
-  <h2 class="text-center text-ocre font-playfair font-semibold italic">
+  <h2 id="typologies" class="text-center text-ocre font-playfair font-semibold italic">
     NOS VILLAS
   </h2>
   <div class="divider text-center mb-[10px] mx-auto"></div><br>
