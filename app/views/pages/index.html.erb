@@ -1,8 +1,8 @@
-<div class="bg-contain bg-center md:bg-fixed mt-[80px] md:mx-10 h-[82vh]" style="background-image: url('<%= asset_path("hero-3.jpg") %>');">
+<div class="md:bg-contain bg-center bg-cover md:bg-fixed mt-[80px] md:mx-10 h-[82vh]" style="background-image: url('<%= asset_path("hero-3.jpg") %>');">
 
 </div>
 <div data-controller="fade-scroll" class="flex flex-col justify-center items-center py-4 opacity-0 translate-y-4 transition-all duration-[1500ms]">
-  <h2 class="text-center text-main font-playfair">
+  <h2 class="text-center text-main font-playfair mx-4 md:mx-0">
     LE DOMAINE OU LE LUXE SE FAIT SILENCE
   </h2>
 </div>
@@ -11,10 +11,10 @@
     <li class="font-playfair text-lg text-perse hover:text-main">
       <%= link_to "Emplacement", "#localisation" %>
     </li>
-    <li class=" text-perse font-playfair text-lg hover:text-main mx-10">
+    <li class=" text-perse font-playfair text-lg hover:text-main mx-4 md:mx-10">
       <%= link_to "Concept", "#concept" %>
     </li>
-    <li class="text-perse font-playfair text-lg hover:text-main mr-10">
+    <li class="text-perse font-playfair text-lg hover:text-main mr-4 md:mr-10">
       <%= link_to "Equipements", "#equipements" %>
     </li>
     <li class="text-perse font-playfair text-lg hover:text-main">
@@ -27,13 +27,13 @@
 </div>
 
 
-<div class="bg-nude my-4 md:mx-20 py-4 flex flex-col items-center">
+<div class="bg-nude px-2 md:px-0 md:my-4 md:mx-20 py-4 flex flex-col items-center">
   <!-- Ligne : texte + image -->
-  <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
+  <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8 pt-8 md:pt-0">
     <!-- Texte -->
     <div
       data-controller="fade-scroll"
-      class="opacity-0 translate-y-4 transition-all duration-[1500ms]  lg:w-[500px]"
+      class="opacity-0 translate-y-4 transition-all duration-[1500ms]  lg:w-[500px] px-4 md:px-0"
     >
       <h3 class="text-2xl font-playfair italic text-ocre mb-6 font-bold">
         Un emplacement d’exception entre ville nature et loisirs.
@@ -77,7 +77,7 @@
 
 
 
-<div id="concept" class="my-8 md:px-12  px-4 py-8 mx-4 md:mx-20 bg-archi text-white">
+<div id="concept" class="my-8 px-4 md:px-12  py-8 md:mx-20 bg-archi text-white">
   <div class="flex flex-col md:flex-row justify-between items-center">
     <div data-controller="slide-in" data-slide-in-direction-value="left" class="flex flex-col items-center justify-between min-w-[300px]">
       <%= image_tag "kacem-photo.jpg", class:"w-[350px]" %>
@@ -122,7 +122,7 @@
 </div>
 
 <!-- Conteneur de l'image -->
-<div class="relative h-[550px] overflow-hidden md:mx-10 my-12">
+<div class="relative h-[550px] overflow-hidden md:mx-10 my-6 md:my-12">
   <!-- Background : l'image en fond -->
   <div class="absolute inset-0 md:bg-fixed bg-center bg-cover" 
        style="background-image: url('<%= asset_path("parralax-gate.jpg") %>');">
@@ -132,9 +132,9 @@
 <!-- Encart textuel placé à l'extérieur du conteneur de l'image -->
 <div class="md:mx-10 md:relative">
   <!-- Utilisation d'une marge négative pour faire chevaucher l'encart sur l'image -->
-  <div data-controller="fade-scroll" class="bg-white md:w-[675px] py-8 px-12 flex justify-center items-center md:-mt-56 md:ml-20">
+  <div data-controller="fade-scroll" class="bg-white md:w-[675px] py-2 md:py-8 px-12 flex justify-center items-center md:-mt-56 md:ml-20">
     <h3 class="text-main text-justify text-lg font-playfair">
-      <span class="font-playfair italic text-ocre text-xl font-bold">
+      <span class="font-playfair italic text-ocre text-xl font-bold mb-1 md:mb-0">
         Des villas d’exception, conçues pour une vie en harmonie avec la nature <br>
       </span>
       Pensé comme un havre de tranquillité aux portes de Marrakech, Botanik Garden
@@ -150,7 +150,7 @@
 </div>
 
 
-<div id="equipements" class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-2 md:mx-10 py-[50px]">
+<div id="equipements" class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude md:mx-10 py-[50px]">
   <%= image_tag "2-2.jpg", class:"w-[354px] md:w-auto md:h-[516px] mb-[8px] md:mb-0 md:mr-[8px] drop-shadow-xl" %>
   <div class="flex flex-col">
     <div class="flex mb-[8px]">
@@ -190,8 +190,8 @@
   <div class="absolute bottom-0 left-2 right-2 md:left-10 md:right-10 h-3/4 bg-nude"></div>
 
   <div class="flex items-center justify-center relative z-10">
-    <button data-action="click->carousel#prev" class="flex-shrink-0 p-2 hover:opacity-80 transition">
-      <%= image_tag "arrow-left-bis.svg", alt: "Précédent", class: "w-[70px] md:w-[125px]" %>
+    <button data-action="click->carousel#prev" class="flex-shrink-0 md:p-2 -mr-4 md:mr-0 hover:opacity-80 transition">
+      <%= image_tag "arrow-left-bis.svg", alt: "Précédent", class: "w-[50px] md:w-[125px]" %>
     </button>
 
     <div class="relative overflow-hidden flex-shrink-0
@@ -211,8 +211,8 @@
       <% end %>
     </div>
 
-    <button data-action="click->carousel#next" class="flex-shrink-0 p-2 hover:opacity-80 transition">
-      <%= image_tag "arrow-right-bis.svg", alt: "Suivant", class: "w-[70px] md:w-[125px]" %>
+    <button data-action="click->carousel#next" class="flex-shrink-0 md:p-2 hover:opacity-80 transition -ml-4 md:ml-0">
+      <%= image_tag "arrow-right-bis.svg", alt: "Suivant", class: "w-[50px] md:w-[125px]" %>
     </button>
   </div>
 </div>
@@ -225,7 +225,7 @@
   </div>
 
 </div>
-<div id="nos-villas"  class="mt-16 mb-8 mx-4 md:mx-0">
+<div id="nos-villas"  class="mt-16 mb-8 md:mx-0">
   <h2 id="typologies" class="text-center text-ocre font-playfair font-semibold italic">
     NOS VILLAS
   </h2>
@@ -462,8 +462,8 @@
 
 
 <div data-controller="modal fade-scroll" class="my-8 md:my-12 flex flex-col md:flex-row justify-center items-center opacity-0 translate-y-4 transition-all duration-[1500ms]">
-  <%= image_tag "Rooftop-02.png", alt: "photo rooftop Villa Botanik Garden 2", class:"w-[570px] dropshadow" %>
-  <div class="md:w-[500px] md:px-4 mx-8 md:ml-4 text-center">
+  <%= image_tag "Rooftop-02.png", alt: "photo rooftop Villa Botanik Garden 2", class:"w-[570px] dropshadow mb-4 md:mb-0" %>
+  <div class="md:w-[500px] md:px-4 my-4 md:my-0 mx-8 md:ml-4 text-center">
     <!-- Bouton d'ouverture du modal -->
     <button data-action="click->modal#open" class="text-white bg-ocre rounded-3xl px-4 py-2 text-2xl font-playfair animate-bounce">
       Télécharger notre brochure

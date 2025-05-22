@@ -42,28 +42,32 @@
             CONTACTEZ-NOUS
           </button>
 
-          <div data-modal-target="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">
-            <div class="bg-white py-12 px-24 relative w-[900px] max-w-[1200px] drop-shadow-xl">
-              <button data-action="click->modal#close" class="absolute top-2 right-2 text-main text-2xl z-50">&times;</button>
-              <h2 class="text-2xl mb-4 text-center font-playfair text-main tracking-[0.02rem]">Télécharger la brochure</h2>
-              <%= form_with url: brochure_path, method: :post, local: true, html: { target: "download_iframe" } do |form| %>
-                <div class="mb-4">
-                  <%= form.text_field :name, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main font-playfair", required: true, placeholder: "Nom" %>
-                </div>
-                <div class="mb-4">
-                  <%= form.email_field :email, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main font-playfair", required: true, placeholder: "Email" %>
-                </div>
-                <div class="mb-4">
-                  <%= form.telephone_field :phone, class: "w-full border-b-[1px] border-perse px-2 py-1 focus:outline-none text-main font-playfair", required: true, placeholder: "Téléphone" %>
-                </div>
-                <div class="mb-4">
-                  <%= recaptcha_tags %>
-                </div>
-                <div class="flex justify-center">
-                  <%= form.submit "Télécharger la brochure", class: "bg-main text-white px-4 py-2 rounded-full font-playfair tracking-[0.02rem]" %>
-                </div>
-              <% end %>
-            </div>
+        <div data-modal-target="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div class="bg-white p-6 rounded-lg relative w-full max-w-lg">
+            <!-- Bouton de fermeture -->
+            <button data-action="click->modal#close" class="absolute top-2 right-2 text-gray-500 text-2xl">&times;</button>
+            <h2 class="text-2xl mb-4 text-center font-playfair text-ocre font-bold">Télécharger la brochure</h2>
+            
+            <!-- Formulaire de contact -->
+            <%= form_with url: brochure_path, method: :post, local: true, html: { target: "download_iframe" } do |form| %>
+              <div class="mb-4">
+                <%= form.text_field :name, class: "w-full border-b-2 border-perse px-2 py-1 focus:outline-none text-perse text-base font-playfair", required: true, placeholder: "Nom" %>
+              </div>
+              <div class="mb-4">
+                <%= form.email_field :email, class: "w-full border-b-2 border-perse px-2 py-1 focus:outline-none text-perse text-base font-playfair", required: true, placeholder: "Email" %>
+              </div>
+              <div class="mb-4">
+                <%= form.telephone_field :phone, class: "w-full border-b-2 border-perse px-2 py-1 focus:outline-none text-perse text-base font-playfair", required: true, placeholder: "Téléphone" %>
+              </div>
+              <div class="mb-4">
+                <!-- Intégration du widget Google reCAPTCHA -->
+                <%= recaptcha_tags %>
+              </div>
+              <div class="flex justify-center">
+                <%= form.submit "Télécharger la brochure", class: "bg-ocre text-white px-4 py-2 rounded-full font-playfair text-lg md:text-xl" %>
+              </div>
+            <% end %>
+
           </div>
         </div>
 
