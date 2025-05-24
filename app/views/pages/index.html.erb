@@ -11,13 +11,13 @@
     <li class="font-playfair text-base md:text-lg text-perse hover:text-main">
       <%= link_to "Emplacement", "#localisation" %>
     </li>
-    <li class=" text-perse font-playfair text-base md:text-lg hover:text-main mx-4 md:mx-10">
+    <li class=" text-perse font-playfair text-sm md:text-lg hover:text-main mx-4 md:mx-10">
       <%= link_to "Concept", "#concept" %>
     </li>
-    <li class="text-perse font-playfair text-lg hover:text-main mr-4 md:mr-10">
+    <li class="text-perse font-playfair text-sm md:text-lg hover:text-main mr-4 md:mr-10">
       <%= link_to "Equipements", "#equipements" %>
     </li>
-    <li class="text-perse font-playfair text-base md:text-lg hover:text-main">
+    <li class="text-perse font-playfair text-sm md:text-lg hover:text-main">
       <%= link_to "Typologies", "#typologies" %>
     </li>
   </ul>
@@ -88,7 +88,7 @@
     </div>
 
     <div>
-      <h2 class="text-white mx-2 md:mx-8 pt-4 md:pt-0 pb-8 font-playfair italic font-bold">
+      <h2 class="text-white mx-2 md:mx-8 pt-4 md:pt-0 pb-8 font-playfair font-bold">
         Botanik Garden – L’architecture au service de la nature
       </h2>
       <div data-controller="fade-scroll" class="flex flex-col md:flex-row opacity-0 translate-y-4 transition-all duration-[1500ms]">
@@ -150,7 +150,7 @@
 </div>
 
 
-<div id="equipements" class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-4 md:mx-10 py-[50px]">
+<div id="equipements" class="flex flex-col md:flex-row my-12 items-center md:items-end justify-center bg-nude mx-4 md:mx-10 py-[25px] md:py-[50px]">
   <%= image_tag "3.jpg", class:"w-[265px] md:w-auto md:h-[516px] mb-[8px] md:mb-0 md:mr-[8px] drop-shadow-xl" %>
   <div class="flex flex-col">
     <div class="flex mb-[8px]">
@@ -190,8 +190,8 @@
   <div class="absolute bottom-0 left-2 right-2 md:left-10 md:right-10 h-3/4 bg-nude"></div>
 
   <div class="flex items-center justify-center relative z-10">
-    <button data-action="click->carousel#prev" class="flex-shrink-0 md:p-2 -mr-4 md:mr-0 hover:opacity-80 transition">
-      <%= image_tag "arrow-left-bis.svg", alt: "Précédent", class: "w-[50px] md:w-[125px]" %>
+    <button data-action="click->carousel#prev" class="flex-shrink-0 md:p-2 -mr-6 md:mr-0 hover:opacity-80 transition z-20">
+      <%= image_tag "arrow-left-bis.svg", alt: "Précédent", class: "w-[40px] md:w-[125px]" %>
     </button>
 
     <div class="relative overflow-hidden flex-shrink-0
@@ -211,8 +211,8 @@
       <% end %>
     </div>
 
-    <button data-action="click->carousel#next" class="flex-shrink-0 md:p-2 hover:opacity-80 transition -ml-4 md:ml-0">
-      <%= image_tag "arrow-right-bis.svg", alt: "Suivant", class: "w-[50px] md:w-[125px]" %>
+    <button data-action="click->carousel#next" class="flex-shrink-0 md:p-2 hover:opacity-80 transition -ml-6 md:ml-0 z-20">
+      <%= image_tag "arrow-right-bis.svg", alt: "Suivant", class: "w-[40px] md:w-[125px]" %>
     </button>
   </div>
 </div>
@@ -465,7 +465,7 @@
   <%= image_tag "Rooftop-02.png", alt: "photo rooftop Villa Botanik Garden 2", class:"w-[570px] dropshadow mb-4 md:mb-0" %>
   <div class="md:w-[500px] md:px-4 my-4 md:my-0 mx-8 md:ml-4 text-center">
     <!-- Bouton d'ouverture du modal -->
-    <button data-action="click->modal#open" class="text-white bg-ocre rounded-3xl px-4 py-2 text-2xl font-playfair animate-bounce">
+    <button data-action="click->modal#open" class="text-white bg-ocre rounded-3xl px-4 py-2 text-xl md:text-2xl font-playfair animate-bounce">
       Télécharger notre brochure
     </button>
   </div>
